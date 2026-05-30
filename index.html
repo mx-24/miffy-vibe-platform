@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Vibe Playground</title>
+    <style>
+        /* === 1. PAGE BACKGROUND & LAYOUT === */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            /* Vibrant gradient background */
+            background: linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+        }
+
+        /* === 2. HEADER STYLES === */
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        /* === 3. CARD CONTAINER (FLEXBOX) === */
+        .project-container {
+            display: flex;
+            flex-wrap: wrap; /* Automatically stacks on small screens */
+            gap: 25px;
+            justify-content: center;
+            padding: 20px;
+            max-width: 1000px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* === 4. CARD STYLES === */
+        .project-card {
+            background: #ffffff;
+            color: #333;
+            text-decoration: none; /* Removes default link underline */
+            padding: 30px;
+            border-radius: 16px;
+            width: 260px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            /* Top accent border */
+            border-top: 6px solid #FF6B6B;
+        }
+
+        /* Hover effect: card lifts up slightly */
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Different accent colors for each card */
+        .project-card:nth-child(2) { border-top-color: #4ECDC4; }
+        .project-card:nth-child(3) { border-top-color: #FFE66D; }
+
+        .project-card h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            margin: 0 0 15px 0;
+            color: #666;
+        }
+
+        /* Fake button style inside the card */
+        .open-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ✏️ Change the text below to your own platform name! -->
+    <header>
+        <h1>🎨 My Vibe Playground</h1>
+        <p>Welcome! Click a card to explore my projects in a new tab.</p>
+    </header>
+
+    <main class="project-container">
+        <!-- Project 1 -->
+        <a href="project1/index.html" target="_blank" class="project-card">
+            <h2>🚀 Project Name 1</h2>
+            <p>A cool web experiment</p>
+            <span class="open-btn">Open Project →</span>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="project2/index.html" target="_blank" class="project-card">
+            <h2>🎮 Project Name 2</h2>
+            <p>An interactive tool</p>
+            <span class="open-btn">Open Project →</span>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="project3/index.html" target="_blank" class="project-card">
+            <h2>🎨 Project Name 3</h2>
+            <p>A visual showcase</p>
+            <span class="open-btn">Open Project →</span>
+        </a>
+    </main>
+
+</body>
+</html>
